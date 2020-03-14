@@ -57,6 +57,7 @@ while True:
     cc=str(ser.readline())
     key = cc[2:][:-5]
     
+    #arrow keys
     if(key == "right"):
         keyboard.press(Key.right)  
         time.sleep(0.1)
@@ -77,6 +78,7 @@ while True:
         time.sleep(0.1)
         keyboard.release(Key.up)  
     
+    #media keys
     if(key == "play"):
         keyboard.press(Key.media_play_pause)  
         keyboard.release(Key.media_play_pause)  
@@ -101,10 +103,12 @@ while True:
         keyboard.press(Key.media_volume_mute)  
         keyboard.release(Key.media_volume_mute)
     
+    #left click 
     if(key == "click"):
         mouse.press(Button.left)
         mouse.release(Button.left)
     
+    #mouse rotates
     if(key == "rightmouse"):
         mouse.move(15,0)
     
@@ -117,7 +121,7 @@ while True:
     if(key == "upmouse"):
         mouse.move(0,-15)
     
-    
+    #this script shuts down computer on Windows 10
     if(key == "kill"):
         keyboard.press(Key.cmd_l)  
         keyboard.release(Key.cmd_l)
